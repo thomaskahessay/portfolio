@@ -131,11 +131,11 @@ function App() {
                 root: {
                   backgroundColor:
                     theme.colorScheme === "dark"
-                      ? theme.colors["light-beige"][3]
+                      ? theme.colors["dark-brown"][7]
                       : theme.colors["light-brown"][2],
                   color:
                     theme.colorScheme === "dark"
-                      ? theme.colors["dark-brown"][9]
+                      ? theme.colors["light-brown"][2]
                       : "white",
                 },
               }),
