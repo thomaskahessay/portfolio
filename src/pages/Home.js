@@ -280,7 +280,18 @@ const Home = () => {
                 utilized a database using MySQL as well as a client-server
                 architecture built with Java.
               </Text>
-              <Button color='brown' fullWidth mt='md' radius='md'>
+              <Button
+                color='brown'
+                fullWidth
+                mt='md'
+                radius='md'
+                onClick={() =>
+                  window.open(
+                    "https://github.com/thomaskahessay/ENSF409-FinalProject",
+                    "_blank"
+                  )
+                }
+              >
                 View Project
               </Button>
             </Card>
