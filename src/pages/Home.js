@@ -2,8 +2,6 @@ import React from "react";
 import {
   Box,
   Title,
-  Center,
-  Header,
   Group,
   Container,
   Image,
@@ -23,13 +21,14 @@ import {
   IconSun,
   IconMoonStars,
 } from "@tabler/icons";
+import SideBar from "../components/SideBar";
 import profile from "../images/profile.jpg";
 import tuneIn from "../images/tune-in.png";
 import dotsAndBoxes from "../images/dots-and-boxes.png";
 import youtube from "../images/youtube.jpeg";
 import relectric from "../images/relectric.png";
 import rezellers from "../images/rezellers.jpg";
-import SideBar from "../components/SideBar";
+import school from "../images/school.jpg";
 
 const Home = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
@@ -267,18 +266,19 @@ const Home = () => {
             </Card>
             <Card>
               <Card.Section>
-                <Image src={profile} height={160} />
+                <Image src={school} height={160} />
               </Card.Section>
               <Group position='apart' mt='md' mb='xs'>
-                <Title order={4}>Project</Title>
+                <Title order={4}>Student Registration</Title>
                 <Badge color='brown' variant={dark ? "filled" : "light"}>
                   Completed
                 </Badge>
               </Group>
               <Text>
-                With Fjord Tours you can explore more of the magical fjord
-                landscapes with tours and activities on and around the fjords of
-                Norway
+                Built a student registration system to maintain student records,
+                allowing students to enroll and view courses. The application
+                utilized a database using MySQL as well as a client-server
+                architecture built with Java.
               </Text>
               <Button color='brown' fullWidth mt='md' radius='md'>
                 View Project
