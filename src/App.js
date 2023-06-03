@@ -3,9 +3,11 @@ import { MantineProvider, ColorSchemeProvider } from "@mantine/core";
 import "./App.css";
 import "./fonts/Montserrat.ttf";
 import Home from "./pages/Home";
+import { useColorScheme } from "@mantine/hooks";
 
 function App() {
-  const [colorScheme, setColorScheme] = useState("light");
+  const preferredColorScheme = useColorScheme();
+  const [colorScheme, setColorScheme] = useState(preferredColorScheme);
   const toggleColorScheme = (value) => setColorScheme(value);
 
   return (
@@ -51,6 +53,11 @@ function App() {
             ".landing": {
               height: "100vh",
               width: "100%",
+              color:
+                theme.colorScheme === "dark"
+                  ? theme.colors["tan"][1]
+                  : theme.colors["dark-brown"][4],
+              marginBottom: "80px",
             },
             ".header": {
               backgroundColor:
@@ -94,12 +101,15 @@ function App() {
                     : theme.colors["dark-brown"][8],
               },
             },
+            ".port-img": {
+              marginBottom: "150px",
+            },
             ".sec-heading": {
               marginTop: "150px",
               lineHeight: 0,
             },
             ".about-h1": {
-              fontSize: "10rem",
+              fontSize: "7rem",
               opacity: 0.3,
               lineHeight: 0,
             },
@@ -107,15 +117,37 @@ function App() {
               fontSize: "3rem",
               fontWeight: 800,
             },
-            ".projects-h1": {
-              fontSize: "10rem",
-              opacity: 0.3,
+            ".section-h1": {
+              fontSize: "8rem",
+              opacity: theme.colorScheme === "dark" ? 0.5 : 0.3,
             },
             ".trans-image": {
               backgroundColor: "white",
             },
+            ".mantine-Timeline-itemTitle": {
+              color:
+                theme.colorScheme === "dark"
+                  ? theme.colors["light-brown"][3]
+                  : theme.colors["dark-brown"][9],
+              fontWeight: 900,
+              fontSize: "1.5rem",
+            },
+            ".mantine-Timeline-itemContent": {
+              color:
+                theme.colorScheme === "dark" ? theme.colors["tan"][1] : "white",
+            },
           }),
           components: {
+            Text: {
+              styles: (theme) => ({
+                root: {
+                  color:
+                    theme.colorScheme === "dark"
+                      ? theme.colors["tan"][1]
+                      : theme.colors["dark-brown"][4],
+                },
+              }),
+            },
             Navbar: {
               styles: (theme) => ({
                 root: {
@@ -135,8 +167,42 @@ function App() {
                       : theme.colors["light-brown"][2],
                   color:
                     theme.colorScheme === "dark"
-                      ? theme.colors["light-brown"][2]
+                      ? theme.colors["tan"][1]
                       : "white",
+                },
+              }),
+            },
+            Paper: {
+              styles: (theme) => ({
+                root: {
+                  backgroundColor:
+                    theme.colorScheme === "dark"
+                      ? theme.colors["dark-brown"][7]
+                      : theme.colors["light-brown"][2],
+                  color:
+                    theme.colorScheme === "dark"
+                      ? theme.colors["tan"][1]
+                      : "white",
+                },
+              }),
+            },
+            Timeline: {
+              styles: (theme) => ({
+                root: {
+                  color:
+                    theme.colorScheme === "dark"
+                      ? theme.colors["tan"][1]
+                      : "white",
+                },
+              }),
+            },
+            List: {
+              styles: (theme) => ({
+                root: {
+                  color:
+                    theme.colorScheme === "dark"
+                      ? theme.colors["light-brown"][2]
+                      : theme.colors["dark-brown"][4],
                 },
               }),
             },

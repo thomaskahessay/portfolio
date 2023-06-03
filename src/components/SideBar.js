@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Burger, Drawer, Container, Navbar, Button } from "@mantine/core";
+import { Burger, Drawer, Navbar, Button } from "@mantine/core";
 import {
   IconUser,
   IconDeviceLaptop,
@@ -29,7 +29,15 @@ const SideBar = () => {
               variant='subtle'
               leftIcon={<IconUser size={50} />}
               size='xl'
-              onClick={() => {}}
+              onClick={() => {
+                let section = document.getElementById("about");
+                section.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+                setDrawerOpened(false);
+              }}
               fullWidth
               className='nav-btn'
             >
@@ -41,7 +49,15 @@ const SideBar = () => {
               variant='subtle'
               leftIcon={<IconDeviceLaptop size={50} />}
               size='xl'
-              onClick={() => {}}
+              onClick={() => {
+                let section = document.getElementById("projects");
+                section.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+                setDrawerOpened(false);
+              }}
               fullWidth
               className='nav-btn'
             >
@@ -53,7 +69,15 @@ const SideBar = () => {
               variant='subtle'
               leftIcon={<IconTools size={50} />}
               size='xl'
-              onClick={() => {}}
+              onClick={() => {
+                let section = document.getElementById("skills");
+                section.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+                setDrawerOpened(false);
+              }}
               fullWidth
               className='nav-btn'
             >
@@ -65,7 +89,15 @@ const SideBar = () => {
               variant='subtle'
               leftIcon={<IconSubtask size={50} />}
               size='xl'
-              onClick={() => {}}
+              onClick={() => {
+                let section = document.getElementById("experience");
+                section.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+                setDrawerOpened(false);
+              }}
               fullWidth
               className='nav-btn'
             >
@@ -77,7 +109,15 @@ const SideBar = () => {
               variant='subtle'
               leftIcon={<IconAddressBook size={50} />}
               size='xl'
-              onClick={() => {}}
+              onClick={() => {
+                let section = document.getElementById("contact");
+                section.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                });
+                setDrawerOpened(false);
+              }}
               fullWidth
               className='nav-btn'
             >

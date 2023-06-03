@@ -3,6 +3,10 @@
   src: local("Montserrat"), url("./fonts/Montserrat.ttf") format("truetype");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: "purple";
 }
